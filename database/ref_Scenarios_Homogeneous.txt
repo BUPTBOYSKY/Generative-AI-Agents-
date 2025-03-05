@@ -1,0 +1,27 @@
+Downlink LEO Satellite Communication with MIMO and Beamforming
+In homogeneous scenarios involving a downlink Low Earth Orbit (LEO) satellite and a terrestrial network, consider an \(N_T\)-antenna LEO satellite serving \(K\) single-antenna LEO ground users (LGUs). The expected power of each transmitted symbol \(s_k\) is normalized, represented by \(\mathbb{E}\{|s_k|^2\} = 1\), where \(k\) belongs to the set \(\mathcal{K} = \{1, ..., K\}\). Consequently, the transmit signal, denoted as \(x\), is formulated as:
+\[x = \sum_{k=1}^{K} w_k s_k\]
+where \(w_k \in \mathbb{C}^{N_T \times 1}\) signifies the beamforming vector associated with the stream \(s_k\).
+Key Concepts and Related Information:
+LEO Satellite Communication:
+LEO satellites offer reduced latency due to their lower orbital altitude, making them suitable for latency-sensitive applications.
+The high velocity of LEO satellites necessitates frequent satellite handovers, posing design challenges for communication systems.
+LEO satellites have a relatively small coverage footprint, requiring extensive constellations for global coverage.
+Downlink Communication:
+This refers to the communication link from the satellite to the ground users.
+In downlink scenarios, the satellite must simultaneously transmit signals to multiple ground users, necessitating the use of multiple access techniques.
+Multiple-Input Multiple-Output (MIMO) Technology:
+The \(N_T\) antennas on the satellite enable the implementation of MIMO technology.
+MIMO enhances channel capacity, increases data transmission rates, and improves communication quality.
+Beamforming, a subset of MIMO, concentrates signal energy towards intended users by adjusting antenna array weights, thereby strengthening signal intensity.
+Single-Antenna Users:
+The \(K\) single-antenna LGUs indicate that each ground user is equipped with only one antenna.
+Single-antenna users typically receive weaker signals, requiring the satellite to employ techniques like beamforming for signal enhancement.
+Signal Model:
+\(\mathbb{E}\{|s_k|^2\} = 1\) represents that the average energy of the transmited signals is normalized to one.
+The given linear equation represents that the transmited signal is the sum of all of the users signals with a weight applied to each one.
+Beamforming Vector (\(w_k\)):
+This complex vector, \(w_k \in \mathbb{C}^{N_T \times 1}\), defines the weights applied to each antenna.
+The design of beamforming vectors is crucial for MIMO performance and requires optimization based on channel state information.
+Homogeneous Scenarios:
+Homogenous scenarios, represent that the devices within the network, have similiar characteristics, for example, that all of the ground users utilize the same kind of reciever.

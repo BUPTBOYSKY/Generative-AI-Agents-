@@ -1,0 +1,24 @@
+Time-Varying Channel Model: Gauss-Markov Fading
+In a time-varying channel model, the statistical characteristics of the communication channel, like Doppler shift, vary rapidly over time. Adapting Jakes' model [35], and assuming the large-scale fading remains constant from equation (9) (which isn't explicitly shown, but referenced), the small-scale fading vector \(\mathbf{g}\) is described by a first-order complex Gauss-Markov process:
+\[
+\mathbf{g}(t) = \rho \mathbf{g}(t-1) + \sqrt{1 - \rho^2} \mathbf{e} \quad (10)
+\]
+In equation (10), \(\mathbf{e}\) represents additive complex Gaussian noise, which has the same statistical distribution as \(\mathbf{g}\). The correlation coefficient \(\rho\) is defined by:
+\[
+\rho = J_0(2 \pi f_d T_s) \quad (11)
+\]
+Where \(J_0(\cdot)\) signifies the zero-order Bessel function of the first kind, \(T_s\) is the time interval between consecutive samples, and \(f_d\) is the maximum Doppler frequency.
+Key Independent Points:
+Gauss-Markov Process for Fading:
+The channel's small-scale fading is modelled as a first-order complex Gauss-Markov process. This signifies that the current fading condition is directly influenced by the previous fading condition, as well as an added white gaussian noise component.
+This type of model allows for the simulation of time correlation within the channel.
+Correlation Coefficient and Doppler Effect:
+The correlation coefficient \(\rho\) is determined by the Doppler frequency \(f_d\) and the time interval \(T_s\).
+This makes clear the impact of the doppler effect on channel correlation, where a higher doppler frequency and or time sample rate, will decrease the correlation between channel samples.
+The Zero order Bessel function of the first kind is used to compute this correlation.
+Additive Gaussian Noise:
+\(\mathbf{e}\) represents the complex Gaussian noise component, which introduces randomness and variability into the fading process.
+The noise has the same distribution as the fading vector.
+Application:
+This model applies to communication scenarios where there is considerable movement between reciever and transmitter, thus creating a rapidly changing channel.
+

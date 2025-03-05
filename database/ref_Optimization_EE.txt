@@ -1,0 +1,27 @@
+Energy Efficiency (EE) Model in a Communication System
+Energy efficiency (EE) is defined as the ratio of the sum achievable rate to the total power consumption. In this system, the EE at the area is expressed as:
+\[EE(\{\mathbf{w}^p, \mathbf{w}^c, c_k\}) = \frac{R(\{\mathbf{w}^p, \mathbf{w}^c, c_k\})}{P_T(\{\mathbf{w}^p, \mathbf{w}^c\})} \quad (17)\]
+where \(EE(\{\mathbf{w}^p, \mathbf{w}^c, c_k\})\) is the energy efficiency.
+where
+\[P_T(\{\mathbf{w}^p, \mathbf{w}^c\}) = \mu \left\| \mathbf{w}^c \right\|^2 + \sum_{k=1}^K \left\| \mathbf{w}_k^p \right\|^2 + P_C \quad (18)\]
+Here, \(P_T(\{\mathbf{w}^p, \mathbf{w}^c\})\) is the total power consumption.
+With \(\mu \in [1, \infty)\) and \(P_C\) being the power amplifier efficiency factor and the constant power consumption by circuit modules, respectively.
+Key Independent Points:
+Definition of Energy Efficiency:
+EE is the ratio of how much data can be transmitted, to how much power is required to transmit that data.
+It is a key metric for evaluating the power efficiency of communication systems.
+Total Power Consumption Model (Equation 18):
+This model breaks down the total power into three components:
+Power used for transmitting common signals (\(\mu \left\| \mathbf{w}^c \right\|^2\)).
+Power used for transmitting private signals (\(\sum_{k=1}^K \left\| \mathbf{w}_k^p \right\|^2\)).
+Constant power consumption by circuit modules (\(P_C\)).
+The factor \(\mu\) reflects the efficiency of the power amplifier for the common signal.
+It is assumed that the power amp efficiency of the private streams is 1.
+Relationship Between EE and Achievable Rate:
+From equation (17), higher achievable rates result in higher energy efficiency, given constant power consumption.
+Conversely, higher power consumption results in lower energy efficiency, given a constant achievable rate.
+Practical Considerations:
+\(P_C\) accounts for the baseline power consumption of the system, which is independent of the transmitted signals.
+Optimizing EE involves finding a balance between maximizing the achievable rate and minimizing the total power consumption.
+The value of Mu, will greatly effect the overall power consumption of the common streams.
+

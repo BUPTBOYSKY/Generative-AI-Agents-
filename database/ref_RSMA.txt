@@ -1,0 +1,38 @@
+Signal-to-Interference-plus-Noise Ratio (SINR) with Rate-Splitting Multiple Access (RSMA)
+To improve system performance by decomposing signals into common and private parts, Rate-Splitting Multiple Access (RSMA) is employed. In this specific scenario, a 1-layer RSMA scheme is utilized.
+The Signal-to-Interference-plus-Noise Ratio (SINR) at the *m*-th Ground User is given by:
+\[
+\Gamma_m(\{\mathbf{w}_k^p, \mathbf{w}^c\}) = \frac{|\mathbf{h}_{G,m}^H \mathbf{w}_m|^2}{\sum_{m'=1, m' \neq m}^{M} |\mathbf{h}_{G,m}^H \mathbf{w}_{m'}|^2 + \sum_{k=1}^{K} |\mathbf{h}_{L,m}^H \mathbf{w}_k^p|^2 + \sum_{k=1}^{K} |\mathbf{h}_{L,m}^H \mathbf{w}_k^c|^2 + \sigma_a^2} \quad (6)
+\]
+Where:
+\(\Gamma_m(\{\mathbf{w}_k^p, \mathbf{w}^c\})\) is the SINR for the *m*-th Ground User.
+\(\mathbf{w}_k^p\) and \(\mathbf{w}_k^c\) represent the beamforming vectors associated with the private and common signal streams, respectively.
+\(\mathbf{h}_{G,m}\) and \(\mathbf{h}_{L,m}\) are channel vectors.
+\(\sigma_a^2\) is the Gaussian noise power.
+The corresponding common SINR and private SINR at the *k*-th user are given by:
+\[
+\Gamma_k^c(\{\mathbf{w}_k^p, \mathbf{w}^c\}) = \frac{|\mathbf{h}_{L,k}^H \mathbf{w}_k^c|^2}{\sum_{k'=1, k' \neq k}^{K} |\mathbf{h}_{L,k}^H \mathbf{w}_{k'}^c|^2 + \sum_{m=1}^{M} |\mathbf{h}_{G,m}^H \mathbf{w}_m|^2 + \sigma_b^2} \quad (7)
+\]
+\[
+\Gamma_k^p(\{\mathbf{w}_k^p\}) = \frac{|\mathbf{h}_{L,k}^H \mathbf{w}_k^p|^2}{\sum_{k'=1, k' \neq k}^{K} |\mathbf{h}_{L,k}^H \mathbf{w}_{k'}^p|^2 + \sum_{m=1}^{M} |\mathbf{h}_{G,m}^H \mathbf{w}_m|^2 + \sigma_b^2} \quad (8)
+\]
+Where:
+\(\Gamma_k^c\) and \(\Gamma_k^p\) are the common and private SINR, respectively, for the *k*-th user.
+\(\sigma_b^2\) is the Gaussian noise power for those users.
+All other variables hold there meaning from before.
+Key Independent Points:
+RSMA Decomposition:
+The core idea is to split signals into common and private streams.
+SINR Calculations:
+Equations (6), (7), and (8) provide formulas for calculating SINR for different users and signal streams.
+Equation 6, displays the SINR for a ground user that is recieving signals that have been affected by both the common, and private streams.
+Equation 7, and 8, display the seperate SINR measurements for both the common, and private streams, as they are recived by the users.
+Interference Consideration:
+The denominators in the SINR equations include interference terms from other users and signal streams.
+Beamforming Vectors:
+The use of beamforming vectors "w" shows that this system utilizes beam forming to help direct the signals.
+Noise Impact:
+Gaussian noise (\(\sigma_a^2\), \(\sigma_b^2\)) is accounted for in the SINR calculations.
+Practical application:
+These equations are to be used when evaluating a system that is utlizing RSMA, in order to determine the SINR that the users will be recieving.
+

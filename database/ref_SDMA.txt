@@ -1,0 +1,33 @@
+Signal-to-Interference-plus-Noise Ratio (SINR) in Spatial Division Multiple Access (SDMA)
+Spatial Division Multiple Access (SDMA) enables the simultaneous serving of multiple ground users by using spatial separation techniques. The following equations define the Signal-to-Interference-plus-Noise Ratio (SINR) for two different types of ground users.
+The SINR at the *m*-th Ground User (GGU) is given by:
+\[
+\Gamma_m(\{\mathbf{w}_k\}) = \frac{|\mathbf{h}_{G,m}^H \mathbf{w}_m|^2}{\sum_{m'=1, m' \neq m}^{M} |\mathbf{h}_{G,m}^H \mathbf{w}_{m'}|^2 + \sum_{k=1}^{K} |\mathbf{h}_{L,k}^H \mathbf{w}_k|^2 + \sigma_a^2} \quad (4)
+\]
+And the SINR at the *k*-th Ground User (LGU) is given by:
+\[
+\Gamma_k(\{\mathbf{w}_k\}) = \frac{|\mathbf{h}_{L,k}^H \mathbf{w}_k|^2}{\sum_{k'=1, k' \neq k}^{K} |\mathbf{h}_{L,k}^H \mathbf{w}_{k'}|^2 + \sum_{m=1}^{M} |\mathbf{h}_{G,m}^H \mathbf{w}_m|^2 + \sigma_b^2} \quad (5)
+\]
+Where:
+\(\Gamma_m(\{\mathbf{w}_k\})\) and \(\Gamma_k(\{\mathbf{w}_k\})\) represent the SINR at the *m*-th GGU and *k*-th LGU, respectively.
+\(\mathbf{w}_m\) and \(\mathbf{w}_k\) are the beamforming vectors.
+\(\mathbf{h}_{G,m}\) represents the channel vector between a transmitter labeled "G" and the *m*-th GGU.
+\(\mathbf{h}_{L,k}\) represents the channel vector between a transmitter labeled "L" and the *k*-th LGU.
+\(\sigma_a^2\) and \(\sigma_b^2\) denote the Gaussian noise powers at the *m*-th GGU and *k*-th LGU, respectively.
+Key Independent Points:
+SDMA Functionality:
+The equations model a system employing SDMA, which aims to serve multiple users concurrently through spatial separation.
+SINR as Performance Metric:
+The SINR equations (4) and (5) quantify the quality of the received signal for each user, considering both desired signal power and interference.
+Interference Modeling:
+The denominators of the equations model interference from other users within the system, demonstrating how interference impacts signal quality.
+It shows the cross interference between two sets of users, as well as the interference caused between the users of each set.
+Beamforming Implementation:
+The presence of beamforming vectors indicates that the system utilizes beamforming to direct signals towards specific users.
+Noise Impact:
+The Gaussian noise terms account for the inevitable presence of thermal noise in the communication system.
+Channel Vectors:
+The h vectors are intended to show the channel state information.
+General Purpose application:
+These equations are to be used when evaluating a system that is utlizing SDMA, in order to determine the SINR that the users will be recieving.
+

@@ -1,0 +1,29 @@
+Fixed Channel Model in Wireless Communication
+In scenarios where channel statistical characteristics remain constant over a long period, a fixed channel model is employed. The channel model is expressed as:
+\[
+\mathbf{h} = \sqrt{G_s G_k \left(\frac{c}{4 \pi f_c d_s}\right)^2} \mathbf{g} \quad (9)
+\]
+Where:
+\(\mathbf{h}\) is the channel vector.
+\(G_s\) represents the satellite antenna gain.
+\(G_k\) represents the user antenna gain.
+\(c\) is the speed of light.
+\(f_c\) is the carrier frequency.
+\(d_s\) is the distance between the corresponding satellite and the user.
+\(\mathbf{g}\) is the small-scale fading vector, which follows a Rician distribution.
+Key Independent Points:
+Static Channel Assumption:
+The key underlying assumption is that the channel's properties remain unchanged for an extended duration. This simplification is useful in environments with minimal variations.
+Path Loss Formulation:
+The term \(\left(\frac{c}{4 \pi f_c d_s}\right)^2\) quantifies path loss, representing the signal's attenuation as it propagates through space. The path loss is proportional to the square of the distance and inversely proportional to the square of the carrier frequency.
+Antenna Gains:
+\(G_s\) and \(G_k\) account for the signal amplification provided by the satellite and user antennas, respectively.
+Small-Scale Fading:
+\(\mathbf{g}\) models the small-scale fading effects, which are rapid fluctuations in signal amplitude due to multipath propagation.
+Rician Fading:
+The assumption of a Rician distribution for \(\mathbf{g}\) indicates the presence of a dominant line-of-sight signal component in addition to scattered multipath components.
+Simplified Representation:
+the Index of hLk and hGm are omitted. This means that this formula is designed to give the general understanding of what the channel vector is made up of, instead of any specific channel vector.
+Practical Applicability:
+This fixed channel model finds applications in scenarios with stable propagation conditions, where the time variations are negligible.
+

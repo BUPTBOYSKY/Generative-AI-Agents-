@@ -1,0 +1,26 @@
+Heterogeneous Satellite Network: GEO and LEO with Shared Spectrum
+This scenario considers a downlink heterogeneous satellite network. The network consists of:
+One NM-antenna Geostationary Earth Orbit (GEO) satellite.
+One NT-antenna Low Earth Orbit (LEO) satellite.
+Key characteristics:
+Both satellites utilize the same frequency spectrum.
+The GEO satellite serves M single-antenna GEO ground users (GGUs).
+The LEO satellite serves K single-antenna LEO ground users (LGUs).
+The expected power of transmitted symbols is normalized: \(\mathbb{E}\{|s_{k}|^{2}\}=1\) and \(\mathbb{E}\{|s_{m}|^{2}\}=1\).
+Indexing:
+0 denotes the GEO satellite.
+m ∈ M = {1, 2, ..., M} denotes the m-th GGU.
+k ∈ K = {1, 2, ..., K} denotes the k-th LGU.
+The transmit signals are given by:
+GEO satellite: \(x_{G}=\sum_{m=1}^{M}w_{m}s_{m}\) (2)
+LEO satellite: \(x_{L}=\sum_{k=1}^{K}w_{k}s_{k}\) (3)
+Where:
+\(w_m\) and \(w_k\) represents the Beamforming vectors for the GEO and LEO satelites respectively.
+\(s_m\) and \(s_k\) represents the transmited signals to the users.
+Network Heterogeneity:The network combines GEO and LEO satellites, leveraging their distinct orbital characteristics.
+Spectrum Sharing:Both satellites operating on the same spectrum introduces potential interference challenges.
+User Distribution:Separate user groups are served by each satellite, indicating a geographically or service-oriented division.
+Signal Representation:Equations (2) and (3) mathematically represent the transmitted signals as a summation of weighted user symbols.
+Beamforming:The presance of the w vectors show the use of beamforming within the satelites transmissions.
+Practical Implications:This model is applicable to hybrid satellite communication systems aimed at enhancing coverage and capacity.This highlights the fundamental equations involved in the description of the transmited signals of a mixed GEO/LEO satelite network.
+

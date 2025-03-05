@@ -1,0 +1,35 @@
+Information Rate and Sum Achievable Rate in a Communication System
+
+For the purpose of spectral efficiency (SE) analysis, the achievable information rate at the \(m\)-th Ground User (GU) is given by:
+
+\[R_m(\{\mathbf{w}_{k'}^p, \mathbf{w}^c\}) = \log_2(1 + \Gamma_m(\{\mathbf{w}_{k'}^p, \mathbf{w}^c\})) \quad (12)\]
+
+Where \(R_m\) represents the information rate for the m-th user, and \(\Gamma_m\) represents the SINR of the same m-th user.
+
+Similarly, the achievable information rates of the common signal part and the private part at the \(k\)-th user are, respectively, given by:
+
+\[R_k^c(\{\mathbf{w}_{k'}^p, \mathbf{w}^c\}) = \log_2(1 + \Gamma_k^c(\{\mathbf{w}_{k'}^p, \mathbf{w}^c\})) \quad (13)\]
+
+\[R_k^p(\{\mathbf{w}_k^p\}) = \log_2(1 + \Gamma_k^p(\{\mathbf{w}_k^p\})) \quad (14)\]
+
+Where \(R_k^c\) and \(R_k^p\) represent the common and private information rates of the k-th user, respectively. Also, \(\Gamma_k^c\) and \(\Gamma_k^p\) represent the common and private SINR of the k-th user, respectively.
+
+To guarantee that the common signal is successfully decoded at all users, the rate of the common message should be chosen as \(\min_k R_k^c(\{\mathbf{w}_{k'}^p, \mathbf{w}^c\})\). Let \(c_k\) denote the data rate for receiving the common message at the \(k\)-th user, which should satisfy that:
+
+\[\sum_{k=1}^K c_k \le \min_k R_k^c(\{\mathbf{w}_{k'}^p, \mathbf{w}^c\}) \quad (15)\]
+
+This ensures that the total common data rate across all users doesn't exceed the minimum achievable common data rate.
+
+Then, the sum achievable rate of the area is expressed as:
+
+\[R(\{\mathbf{w}_{k'}^p, \mathbf{w}^c, c_k\}) = \sum_{k=1}^K (c_k + R_k^p(\{\mathbf{w}_k^p\})) \quad (16)\]
+
+This represents the total information rate achieved by summing the private rates and the common data rates across all users.
+
+Key Independent Points:
+
+Logarithmic Relationship: The achievable information rates are linked to the Signal-to-Interference-plus-Noise Ratio (SINR) through a logarithmic relationship. This stems from the Shannon-Hartley theorem, which forms the foundation of information capacity in communication systems.
+Common Signal Constraint: The necessity of the common signal being decodable by all users imposes a constraint on the overall system's rate. The sum of the common data rate allocated to each user, can not be greater than the smallest common data rate that any user is able to recive.
+Summation of Rates: The total achievable rate is computed by summing the individual private rates and the common signal data rates, reflecting the aggregate throughput of the system.
+Application independence. These formula are able to be used in any system that utlizes Common streams, and private streams.
+
